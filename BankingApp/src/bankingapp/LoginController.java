@@ -15,24 +15,42 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
+ * FXML Controller class
  *
  * @author Suraj
  */
-public class FXMLDocumentController implements Initializable {
-    
+public class LoginController implements Initializable {
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }   
     @FXML
-    private Label label;
-    
+    TextField username;
     @FXML
-    private void handleButtonClickme(ActionEvent event) {
+    PasswordField password;
+   
+    
+    private final String Username = "admin";
+    private final String Password = "password";
+   
+    @FXML
+    private void handleButtonBack(ActionEvent event) {
+        
         try {
+            if (username.getText().equals("admin") || password.getText().equals("password")) {
             Node node = (Node)event.getSource();
            Stage stage = (Stage) node.getScene().getWindow();
            
-           FXMLLoader loader = new FXMLLoader (getClass().getResource("login.fxml"));
+           FXMLLoader loader = new FXMLLoader (getClass().getResource("FXMLDocument.fxml"));
            Parent root = loader.load();
            
            Scene scene = new Scene(root);
@@ -40,15 +58,11 @@ public class FXMLDocumentController implements Initializable {
            stage.show();
            
         }
+        }
         catch (Exception ex){
+            
             System.out.println("Error hero ");
             
         }
-    }
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+       }
 }

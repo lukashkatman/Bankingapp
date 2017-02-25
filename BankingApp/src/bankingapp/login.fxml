@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankingapp.LoginController">
+   <children>
+      <Button layoutX="7.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleButtonBack" text="Tehi khleko ho" />
+      <Label layoutX="192.0" layoutY="52.0" text="Please enter your login credentials" />
+      <TextField fx:id="username" layoutX="430.0" layoutY="107.0" />
+      <Label layoutX="360.0" layoutY="159.0" text="Password" />
+      <PasswordField fx:id="password" layoutX="430.0" layoutY="155.0" />
+      <Label layoutX="358.0" layoutY="111.0" text="Username" />
+   </children>
+</AnchorPane>
